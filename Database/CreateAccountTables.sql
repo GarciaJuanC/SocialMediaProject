@@ -12,7 +12,7 @@ CREATE TABLE UserAccount
 (
 	AccountID	INT NOT NULL,
 	FirstName	NVARCHAR(128) NOT NULL,
-    LastName	NVARCHAR(128) NOT NULL,
+    	LastName	NVARCHAR(128) NOT NULL,
 	DateOfBirth DATE,
 	PhoneNumber NVARCHAR(15),
 	CONSTRAINT UserAccount_pk PRIMARY KEY(AccountID),
