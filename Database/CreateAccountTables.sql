@@ -1,7 +1,7 @@
 -- Create Account table
 CREATE TABLE Account
 (
-    AccountID	INT IDENTITY NOT NULL,
+    	AccountID	INT IDENTITY NOT NULL,
 	Email		NVARCHAR(255) NOT NULL,
 	SaltValue	NVARCHAR(16) NOT NULL,
 	HashedPass	NVARCHAR(255) NOT NULL,
@@ -21,8 +21,8 @@ CREATE TABLE UserAccount
 
 CREATE TABLE AdminAccount
 (
-	AccountID INT NOT NULL,
-	AccessLevel INT,
+	AccountID 	INT NOT NULL,
+	AccessLevel 	INT,
 	CONSTRAINT AdminAcount_pk PRIMARY KEY(AccountID),
 	CONSTRAINT AdminAccount_fk FOREIGN KEY (AccountID) REFERENCES Account(AccountID),
 )
