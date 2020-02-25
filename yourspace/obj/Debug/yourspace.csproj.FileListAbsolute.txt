@@ -141,3 +141,7 @@ C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\pt-BR\Microsoft
 C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\EntityFramework.dll
+C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\EntityFramework.SqlServer.dll
+C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\EntityFramework.xml
+C:\Users\juang\Documents\GitHub\SocialMediaProject\yourspace\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+<title>Login Page</title>
+</head>
+<body>
+<div class="container">
+	<section id="content">
+		<form action="">
+			<h1>Login Form</h1>
+			<div>
+				<input type="email" name = "email" placeholder="email" required="" id="email" />
+			</div>
+			<div>
+				<input type="password" name = "password" placeholder="password" required="" id="password" />
+			</div>
+			<div>
+				<input type="submit" value="Log in" />
+				<a href="#">Forgot your password?</a>
+			</div>
+		</form><!-- form -->
+		
+	</section><!-- content -->
+
+	<section>
+		<form>
+			<h1>Create an Account</h1>
+			<div>
+				<input type="text" placeholder="first name" required="" id="firstname" />
+				<input type="text" placeholder="last name" required="" id="lastname" />
+			</div>
+			<div>
+				<input type="text" placeholder="email" required="" id="email" />
+			</div>
+		</form>
+	</section>
+</div><!-- container -->
+</body>
+</html>
+
+<script>
+  function Validate() {
+    $.ajax(
+    {
+      type: "POST",
+      url: '@Url.Action("Validate", "Login")',
+      data: {
+        email: $('#email').val(),
+        password: $('#password').val()
+      },
+      error: function (result) {
+        alert("There is a Problem, Try Again!");
+      },
+      success: function (result) {
+        console.log(result);
+        if (result.status == true) {
+          window.location.href = '@Url.Action("Index", "Home")';
+        }
+        else {
+          alert(result.message);
+        }
+      }
+    });
+   }
+</script>
+
