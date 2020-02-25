@@ -12,59 +12,12 @@
 	<section id="content">
 		<form action="">
 			<h1>Login Form</h1>
-			<div>
-				<input type="email" name = "email" placeholder="email" required="" id="email" />
-			</div>
-			<div>
-				<input type="password" name = "password" placeholder="password" required="" id="password" />
-			</div>
-			<div>
-				<input type="submit" value="Log in" />
-				<a href="#">Forgot your password?</a>
-			</div>
+		
 		</form><!-- form -->
 		
 	</section><!-- content -->
-
-	<section>
-		<form>
-			<h1>Create an Account</h1>
-			<div>
-				<input type="text" placeholder="first name" required="" id="firstname" />
-				<input type="text" placeholder="last name" required="" id="lastname" />
-			</div>
-			<div>
-				<input type="text" placeholder="email" required="" id="email" />
-			</div>
-		</form>
-	</section>
 </div><!-- container -->
 </body>
 </html>
 
-<script>
-  function Validate() {
-    $.ajax(
-    {
-      type: "POST",
-      url: '@Url.Action("Validate", "Login")',
-      data: {
-        email: $('#email').val(),
-        password: $('#password').val()
-      },
-      error: function (result) {
-        alert("There is a Problem, Try Again!");
-      },
-      success: function (result) {
-        console.log(result);
-        if (result.status == true) {
-          window.location.href = '@Url.Action("Index", "Home")';
-        }
-        else {
-          alert(result.message);
-        }
-      }
-    });
-   }
-</script>
 
